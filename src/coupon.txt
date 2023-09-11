@@ -1,0 +1,12 @@
+<div style={{backgroundColor: '#f2f2f2', padding: '10px', borderTop: '1px solid #ccc'}}>
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+              <div style={{textAlign: 'center'}}>
+                <span>Monday Happy</span>
+                <h5 style={{margin: '5px 0'}}>#MONHPY</h5>
+              </div>
+              <div style={{textAlign: 'center', borderLeft: '1px solid #ccc', paddingLeft: '10px'}}>
+                <h5 style={{margin: '5px 0'}}>20%</h5>
+                <span>Off</span>
+              </div>
+            </div>
+          </div>
