@@ -13,7 +13,7 @@ const reset=()=>{
 }
 const register = ()=>{
 
-    axios.post("http://localhost:3001/register", {
+    axios.post("https://my-e-com-f96d9d63995b.herokuapp.com/register", {
   username: usernameSignup,
   password: passwordSignup,
   date_: date_
