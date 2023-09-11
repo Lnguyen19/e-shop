@@ -24,6 +24,7 @@ const login = ()=>{
     console.log(response);
     if(response.data.success=="login successful"){
       //setUserId(response.data.username)
+      console.log(usernameLogin)
   navigate('/main');
   console.log("it worked")
 }
