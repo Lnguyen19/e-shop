@@ -14,7 +14,7 @@ const navigate = useNavigate();
   const [message,setMessage] = useState('');
   const [commentMessage,setCommentMessage] = useState('');
  useEffect(()=>{
-axios.get(`https://my-e-com-f96d9d63995b.herokuapp.com/api/getbikeComments?bike_id=${bike.item_id}`).then(response=>{
+axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getbikeComments?bike_id=${bike.item_id}`).then(response=>{
   if(response.data){
     console.log('it worked');
     setReviews(response.data);
@@ -28,7 +28,7 @@ axios.get(`https://my-e-com-f96d9d63995b.herokuapp.com/api/getbikeComments?bike_
 
 
 
-    axios.post('https://my-e-com-f96d9d63995b.herokuapp.com/currentSession').then(response=>{
+    axios.post('https://my-e-shop-308930f57b47.herokuapp.com/currentSession').then(response=>{
 if(response.data.username){
   console.log(response.data.username);
   setUser(response.data.username);
@@ -51,7 +51,7 @@ const reset = ()=>{
 
 const buy = ()=>{
 
-axios.post('https://my-e-com-f96d9d63995b.herokuapp.com/api/addToBikePurchases',{
+axios.post('https://my-e-shop-308930f57b47.herokuapp.com/api/addToBikePurchases',{
     item_id: bike.item_id,
      username:user,
      price :bike.price,
@@ -84,7 +84,7 @@ const changingComment= (e) => {
 }
 const commenting = (comments_)=>{
 
-axios.post('https://my-e-com-f96d9d63995b.herokuapp.com/api/bike_comments',{
+axios.post('https://my-e-shop-308930f57b47.herokuapp.com/api/bike_comments',{
 bike_id : bike.item_id,
 username : user,
 rating : 2,

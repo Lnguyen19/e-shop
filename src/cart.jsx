@@ -12,7 +12,7 @@ const [user,setUser] = useState('');
 
 const navigate = useNavigate();
 useEffect(()=>{
-axios.post('https://my-e-com-f96d9d63995b.herokuapp.com/currentSession').then(response=>{
+axios.post('https://my-e-shop-308930f57b47.herokuapp.com/currentSession').then(response=>{
 if(response.data.username){
   console.log(response.data.username);
   setUser(response.data.username);
@@ -27,7 +27,7 @@ else {
 },[])
 
 useEffect(()=>{
-  axios.get(`https://my-e-com-f96d9d63995b.herokuapp.com/api/getCart?username=${user}`).then(response=>{
+  axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getCart?username=${user}`).then(response=>{
   	console.log(user);
   	     setInCart(response.data)
   }).catch(error=>{
@@ -35,13 +35,13 @@ useEffect(()=>{
   	console.error(error);
   })
 
-axios.get(`https://my-e-com-f96d9d63995b.herokuapp.com/api/getCarCart?username=${user}`).then(response=>{
+axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getCarCart?username=${user}`).then(response=>{
   	console.log(response.data)
   	     setInCarCart(response.data)
   }).catch(error=>{
   	console.error(error);
   })
-  axios.get(`https://my-e-com-f96d9d63995b.herokuapp.com/api/getBikeCart?username=${user}`).then(response=>{
+  axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getBikeCart?username=${user}`).then(response=>{
   	console.log(response.data)
   	     setInBikeCart(response.data)
   }).catch(error=>{
@@ -76,7 +76,7 @@ const confirm = ()=>{
 
 const remove_boat= (boat)=>{
     
- axios.delete(`https://my-e-com-f96d9d63995b.herokuapp.com/api/removeBoat?item_id=${boat.item_id}`).then(response=>{
+ axios.delete(`https://my-e-shop-308930f57b47.herokuapp.com/api/removeBoat?item_id=${boat.item_id}`).then(response=>{
 
 if(response.data){
 console.log('delete successful')
@@ -92,7 +92,7 @@ else {
 }
 const remove_car= (car)=>{
     
- axios.delete(`https://my-e-com-f96d9d63995b.herokuapp.com/api/removeCar?item_id=${car.item_id}`).then(response=>{
+ axios.delete(`https://my-e-shop-308930f57b47.herokuapp.com/api/removeCar?item_id=${car.item_id}`).then(response=>{
 
 if(response.data){
 console.log('delete successful')
@@ -107,7 +107,7 @@ else {
 }
 const remove_bike= (bike)=>{
     
- axios.delete(`https://my-e-com-f96d9d63995b.herokuapp.com/api/removeBike?item_id=${bike.item_id}`).then(response=>{
+ axios.delete(`https://my-e-shop-308930f57b47.herokuapp.com/api/removeBike?item_id=${bike.item_id}`).then(response=>{
 
 if(response.data){
 console.log('delete successful')

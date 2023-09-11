@@ -26,7 +26,7 @@ var pic_;
 
 
 useEffect(()=>{
-axios.get('https://my-e-com-f96d9d63995b.herokuapp.com/api/carinventory').
+axios.get('https://my-e-shop-308930f57b47.herokuapp.com/api/carinventory').
 then(response=>{setCarInventory(response.data)})
 .catch(error => console.error('Error fetching data:', error));
 

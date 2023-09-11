@@ -8,7 +8,7 @@ const Bicycles = ()=>{
    const [bikeInventory,setBikeInventory] = useState([]);
    const [message,setMessage] = useState('');
 useEffect(()=>{
-axios.get('https://my-e-com-f96d9d63995b.herokuapp.com/api/bikeinventory').
+axios.get('https://my-e-shop-308930f57b47.herokuapp.com/api/bikeinventory').
 then(response=>{setBikeInventory(response.data)})
 .catch(error => console.error('Error fetching data:', error));
 

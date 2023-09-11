@@ -17,7 +17,7 @@ const ItemView = () => {
   const quantity_ =1;
   useEffect(()=>{
 
-axios.get(`https://my-e-com-f96d9d63995b.herokuapp.com/api/getCarComments?car_id=${car.item_id}`).then(response => {
+axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getCarComments?car_id=${car.item_id}`).then(response => {
   if (response.data) {  // Changed to response.data
     setReviews(response.data);
     console.log('array added');
@@ -32,7 +32,7 @@ axios.get(`https://my-e-com-f96d9d63995b.herokuapp.com/api/getCarComments?car_id
 
 
 
-    axios.post('https://my-e-com-f96d9d63995b.herokuapp.com/currentSession').then(response=>{
+    axios.post('https://my-e-shop-308930f57b47.herokuapp.com/currentSession').then(response=>{
 if(response.data.username){
   console.log(response.data.username);
   setUser(response.data.username);
@@ -53,7 +53,7 @@ const reset=()=>{
 }
 
  const buy = ()=>{
-axios.post('https://my-e-com-f96d9d63995b.herokuapp.com/api/addToCarPurchases',{
+axios.post('https://my-e-shop-308930f57b47.herokuapp.com/api/addToCarPurchases',{
     item_id: car.item_id,
      username:user,
      price :car.price,
@@ -81,7 +81,7 @@ const changingComment= (e) => {
 }
 const commenting = (comments_)=>{
 
-axios.post('https://my-e-com-f96d9d63995b.herokuapp.com/api/car_comments',{
+axios.post('https://my-e-shop-308930f57b47.herokuapp.com/api/car_comments',{
 car_id : car.item_id,
 username : user,
 rating : 2,
