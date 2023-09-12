@@ -26,7 +26,7 @@ return(<>
     <div class="collapse navbar-collapse " id="navbarNav">
       <ul class="navbar-nav " style = {{fontWeight:'bold'}}>
         <li class="nav-item " >
-          <a class="nav-link active" aria-current="page" href="#" onClick={()=>navigate('main')}>Home</a>
+          <a class="nav-link active" aria-current="page" href="#" onClick={()=>navigate('/main')}>Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" onClick={() => navigate('cars')}>Cars</a>
