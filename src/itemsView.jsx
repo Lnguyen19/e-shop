@@ -17,7 +17,7 @@ const ItemView = () => {
   const quantity_ =1;
   useEffect(()=>{
 
-axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getCarComments?car_id=${car.item_id}`).then(response => {
+axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getCarComments?car_id=${car.item_id}`, { withCredentials: true }).then(response => {
   if (response.data) {  // Changed to response.data
     setReviews(response.data);
     console.log('array added');
@@ -32,7 +32,7 @@ axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getCarComments?car_i
 
 
 
-    axios.post('https://my-e-shop-308930f57b47.herokuapp.com/currentSession').then(response=>{
+    axios.post('https://my-e-shop-308930f57b47.herokuapp.com/currentSession', { withCredentials: true }).then(response=>{
 if(response.data.username){
   console.log(response.data.username);
   setUser(response.data.username);
