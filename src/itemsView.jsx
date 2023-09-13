@@ -44,7 +44,7 @@ if(response.data.username){
 }
 else {
 
-
+console.log(response.data)
 
 }
 
