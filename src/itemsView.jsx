@@ -30,9 +30,9 @@ axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getCarComments?car_i
 
 
 
-
-
-    axios.post('https://my-e-shop-308930f57b47.herokuapp.com/currentSession', { withCredentials: true }).then(response=>{
+},[])
+useEffect(()=>{
+   axios.post('https://my-e-shop-308930f57b47.herokuapp.com/currentSession', { withCredentials: true }).then(response=>{
 
   console.log(response.data.username);
   setUser(response.data.username);
@@ -43,7 +43,9 @@ axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getCarComments?car_i
 }).catch(error=>{
   console.error(error);
 })
-},[])
+
+},[user])
+
 
 
 const reset=()=>{
