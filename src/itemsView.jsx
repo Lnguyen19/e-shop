@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 const ItemView = () => {
  //const car = location.state.car;
- 
+ var user_name;
   const location = useLocation();
   const car = location.state.carData;
   const navigate = useNavigate();
@@ -33,13 +33,12 @@ axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getCarComments?car_i
 
 
     axios.post('https://my-e-shop-308930f57b47.herokuapp.com/currentSession', { withCredentials: true }).then(response=>{
-if(response.data.username){
+
   console.log(response.data.username);
   setUser(response.data.username);
-}
-else {
-  console.log('not logged in');
-}
+  user_name = response.data.username;
+   console.log(`the current user is ${user}`)
+ console.log(`the current user is ${user_name}`)
 
 }).catch(error=>{
   console.error(error);

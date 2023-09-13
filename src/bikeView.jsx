@@ -7,6 +7,7 @@ const BikeView = ()=>{
   const location = useLocation();
   const bike = location.state.bikeData;
   const quantity_ = 1;
+var user_name;
 const navigate = useNavigate();
   const [user,setUser] = useState('');
   const [reviews,setReviews] = useState([]);
