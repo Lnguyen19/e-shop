@@ -32,7 +32,7 @@ axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getCarComments?car_i
 
 },[])
 useEffect(()=>{
-   axios.post('https://my-e-shop-308930f57b47.herokuapp.com/currentSession', { withCredentials: true }).then(response=>{
+   axios.post('https://my-e-shop-308930f57b47.herokuapp.com/currentSession').then(response=>{
 
 
 if(response.data.username){
@@ -45,7 +45,7 @@ if(response.data.username){
 else {
 
 
-  
+
 }
 
 
