@@ -45,7 +45,7 @@ return (
                         <div className="mb-4" style ={{boxShadow: '0 4px 8px rgba(0,0,0,0.1)'}}>
                             <input 
                                 type="text" 
-                                className="form-control" 
+                              
                                 placeholder="Username"
                                 onChange={(e) => {
                                     setUsernameSignUp(e.target.value);
@@ -56,7 +56,7 @@ return (
                         <div className="mb-4" style ={{boxShadow: '0 4px 8px rgba(0,0,0,0.1)'}}>
                             <input 
                                 type="password" 
-                                className="form-control" 
+                    
                                 placeholder="Password"
                                 onChange={(e) => {
                                     setPasswordSignUp(e.target.value);
@@ -68,7 +68,7 @@ return (
                          <div className="mb-4">
                             <input 
                                  type = 'date'
-                                className="form-control" 
+                             
                                 placeholder="Day of birth"
                                 onChange={(e) => {
                                     setDate_(e.target.value)
