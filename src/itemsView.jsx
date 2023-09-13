@@ -34,11 +34,22 @@ axios.get(`https://my-e-shop-308930f57b47.herokuapp.com/api/getCarComments?car_i
 useEffect(()=>{
    axios.post('https://my-e-shop-308930f57b47.herokuapp.com/currentSession', { withCredentials: true }).then(response=>{
 
+
+if(response.data.username){
   console.log(response.data.username);
   setUser(response.data.username);
   user_name = response.data.username;
    console.log(`the current user is ${user}`)
  console.log(`the current user is ${user_name}`)
+}
+else {
+
+
+  
+}
+
+
+
 
 }).catch(error=>{
   console.error(error);
